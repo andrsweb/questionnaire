@@ -48,11 +48,11 @@ h6, .h6 {
 
 a {
 	display: inline-block;
-	text-decoration: underline;
-	transition: color ease-out $tr;
+	transition: opacity ease-out $tr;
+	text-decoration: none;
 
 	&:hover {
-		text-decoration: none
+		opacity: $op;
 	}
 }
 
