@@ -49,6 +49,9 @@
 		min-height: 100px;
 		margin-bottom: 30px;
 		transition: min-height ease 0.5s;
+		border-radius: 10px;
+		border-style: solid;
+		border-color: $accent;
 
 		&:focus {
 			min-height: 200px;
