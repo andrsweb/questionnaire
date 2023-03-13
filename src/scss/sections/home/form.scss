@@ -1,5 +1,5 @@
 .main-form {
-	padding: 50px 0;
+	padding: 25px 0;
 
 	label {
 		font-family: $ff;
@@ -9,7 +9,12 @@
 	}
 
 	form {
-		width: 500px;
+		width: 600px;
+	}
+
+	.form-wrapper {
+		display: flex;
+		justify-content: center;
 	}
 
 	fieldset {
@@ -37,8 +42,31 @@
 		}
 	}
 
+	textarea {
+		resize: none;
+		font-family: $ff;
+		font-size: 20px;
+		min-height: 100px;
+		margin-bottom: 30px;
+		transition: min-height ease 0.5s;
+
+		&:focus {
+			min-height: 200px;
+		}
+	}
+
+	legend {
+		font-family: $ff;
+		font-size: 20px;
+		font-weight: $fw-medium;
+		margin-bottom: 25px;
+	}
+
 	.radio-wrapper {
 		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 15px;
 	}
 
 	.button-wrapper {
@@ -47,10 +75,34 @@
 		justify-content: center;
 	}
 
+	.radio-title {
+		font-family: $ff;
+		font-size: 18px;
+		font-weight: $fw-regular;
+		margin-bottom: 15px;
+	}
+
+	.radio-text {
+		font-family: $ff;
+		font-weight: $fw-medium;
+		font-size: 20px;
+		max-width: 200px;
+
+		@media all and (min-width: $lg) {
+			max-width: 500px;
+		}
+	}
+
+	.check-box {
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+	}
+
 	button {
 		padding: 10px 20px;
 		font-family: $ff;
-		font-size: 30px;
+		font-size: 25px;
 		border: 0;
 		border-style: none;
 		cursor: pointer;
