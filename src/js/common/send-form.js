@@ -1,65 +1,36 @@
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
 
-	submitForm( '.form' )
+	submitForm()
 } )
 
-/**
- * Submit form.
- *
- * @param {String}	selector	Form CSS-selector.
- */
-const submitForm = selector => {
-	const forms	= document.querySelectorAll( selector )
+const submitForm = () => {
+    const form         = document.querySelector( '.form' )
+    const formResponse = form.querySelector( '.form-response' )
 
-	if( ! forms.length ) return
+    form.addEventListener( 'submit', e => {
 
-	forms.forEach( form => {
-		form.addEventListener( 'submit', e => {
-			e.preventDefault()
+        e.preventDefault()
 
-			const formResponse	= form.querySelector( '.form-response' ),
-				request		= new XMLHttpRequest(),
-				formData	= new FormData( form ),
-				formType	= form.dataset.type,
-				formTitle	= form.dataset.title,
-				isRedirect	= form.dataset.thanksRedirect
+        const request = new XMLHttpRequest()
 
-			// Add request param for large or small form.
-			formData.append( 'func', formType )
-			formData.append( 'title', formTitle )
-			formData.append('params', localStorage.getItem('params') )
-			request.open( 'post', 'send-form.php', true )
-			request.responseType = 'json'
+        request.open( 'post', 'send-form.php', true )
 
-			formResponse.classList.remove( ['success', 'error'] )
-			formResponse.textContent = 'Обработка...'
+        const formData = new FormData( form )
 
-			request.addEventListener( 'load', () => {
-				if( request.status === 200 ){
-					// If success.
-					if( request.response.success ){
-						form.classList.add( 'success' )
-						form.classList.remove( 'error' )
-						form.innerHTML = request.response.message
-						setTimeout(() => {
-							window.location.href = 'thankyou.html'
-						}, 1000);
+        formResponse.classList.remove( [ 'success', 'error' ] )
+        formResponse.textContent = 'Обработка...'
+        request.addEventListener( 'load', () => {
+            console.log( request.status )
+            if  ( request.status === 200 ) {
+                formResponse.classList.add( 'success' )
+            } else {
+                formResponse.classList.add( 'error' )
+                console.error( request.response )
+            }
 
-						if( isRedirect ) location.href = 'thankyou-wa-rhino.html'
-					}	else {	// If error.
-						formResponse.classList.remove( 'success' )
-						formResponse.classList.add( 'error' )
-						formResponse.textContent = request.response.message
-					}
-				}	else {
-					formResponse.classList.remove( 'success' )
-					formResponse.classList.add( 'error' )
-					formResponse.textContent = request.response
-				}
-			} )
-
-			request.send( formData )
-		} )
-	} )
+            formResponse.textContent = request.response
+        } )
+        request.send( formData )
+    } )
 }
