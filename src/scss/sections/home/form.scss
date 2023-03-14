@@ -1,0 +1,144 @@
+.main-form {
+	padding: 25px 0;
+
+	label {
+		font-family: $ff;
+		font-size: 20px;
+		font-weight: $fw-medium;
+		margin-bottom: 5px;
+	}
+
+	form {
+		width: 600px;
+	}
+
+	.form-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	fieldset {
+		display: flex;
+		flex-direction: column;
+		border: 0;
+	}
+
+	.star {
+		color: $accent;
+	}
+
+	input {
+		font-family: $ff;
+		font-weight: $fw-medium;
+		font-size: 20px;
+		padding: 5px 0 5px 10px;
+		margin-bottom: 20px;
+		border: 0;
+		border-radius: 10px;
+		background-color: $form-bg;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	textarea {
+		resize: none;
+		font-family: $ff;
+		font-size: 20px;
+		min-height: 100px;
+		margin-bottom: 30px;
+		transition: min-height ease 0.5s;
+		border-radius: 10px;
+		border-style: solid;
+		border-color: $accent;
+		padding-left: 10px;
+
+		&:focus {
+			min-height: 200px;
+		}
+	}
+
+	legend {
+		font-family: $ff;
+		font-size: 20px;
+		font-weight: $fw-medium;
+		margin-bottom: 25px;
+	}
+
+	.radio-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 15px;
+	}
+
+	.button-wrapper {
+		margin-top: 40px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.radio-title {
+		font-family: $ff;
+		font-size: 18px;
+		font-weight: $fw-regular;
+		margin-bottom: 15px;
+	}
+
+	.radio-text {
+		font-family: $ff;
+		font-weight: $fw-medium;
+		font-size: 20px;
+		max-width: 200px;
+
+		@media all and (min-width: $lg) {
+			max-width: 500px;
+		}
+	}
+
+	.check-box {
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+	}
+
+	button {
+		padding: 10px 20px;
+		font-family: $ff;
+		font-size: 25px;
+		border: 0;
+		border-style: none;
+		cursor: pointer;
+		border-radius: 10px;
+		background-color: $accent;
+		color: $white;
+		transition: opacity ease $tr;
+
+		&:hover {
+			opacity: $op;
+		}
+	}
+}
+
+.success {
+	padding: 10px;
+	border-radius: 10px;
+	width: 100%;
+	background-color: $form-bg;
+	font-size: 18px;
+	color: $accent;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.error {
+	padding: 10px;
+	border-radius: 10px;
+	width: 100%;
+	background-color: red;
+	font-size: 18px;
+	color: $white;
+	text-align: center;
+	margin-top: 30px;
+}

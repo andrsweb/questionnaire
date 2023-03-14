@@ -15,8 +15,7 @@ $container-xl: 1200px;
 $container-padding: 24px;
 
 // Font families.
-$ff			: Arial, sans-serif;
-$ff-title	: Arial, sans-serif;
+$ff			: 'Fira Sans';
 
 // Font sizes.
 $fs-xs	: 12px;
@@ -37,8 +36,11 @@ $lh			: 1.5;
 $lh-title	: 1.3;
 
 // Colors.
-$white	: #FFFFFF;
-$black	: #000000;
+$white	 : #FFFFFF;
+$black	 : #000000;
+$accent  : rgb(172, 47, 47);
+$form-bg :  rgba(236, 233, 233, 0.637);
 
 // Others.
 $tr: 0.35s;
+$op: 0.7;
