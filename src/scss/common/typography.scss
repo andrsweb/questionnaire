@@ -7,14 +7,16 @@ h6, .h6 {
 	font-family: $ff;
 	font-weight: $fw-bold;
 	line-height: $lh-title;
-	margin: 0 0 1rem
+	text-align: center;
+	margin: 0;
 }
 
 h1, .h1 {
-	font-size: 32px;
+	font-size: 25px;
 
 	@media all and (min-width: $lg) {
-		font-size: 36px
+		font-size: 40px;
+		margin-bottom: 30px;
 	}
 }
 
@@ -48,11 +50,11 @@ h6, .h6 {
 
 a {
 	display: inline-block;
-	text-decoration: underline;
-	transition: color ease-out $tr;
+	transition: opacity ease-out $tr;
+	text-decoration: none;
 
 	&:hover {
-		text-decoration: none
+		opacity: $op;
 	}
 }
 
