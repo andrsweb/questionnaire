@@ -15,30 +15,6 @@ function as_clean_value( $value )
 	return htmlspecialchars( $value );
 }
 
-/**
- * Function checks if value length is between min and max parameters.
- *
- * @param   string	$value  Specific string..
- * @param   int		$min    Minimum symbols value length.
- * @param   int		$max	Maximum symbols value length.
- * @return  bool            True if OK, false if value length is too small or large.
- */
-function as_check_length( string $value, int $min, int $max ): bool
-{
-	return ! ( mb_strlen( $value ) < $min || mb_strlen( $value ) > $max );
-}
-
-/**
- * Function checks name symbols.
- *
- * @param   string  $name   Some name.
- * @return  bool            True if OK, false if string has bad symbols.
- */
-function as_check_name( string $name ): bool
-{
-	return preg_match('/^[a-zа-я\s]+$/iu', $name );
-}
-
 $full		 = isset( $_POST['full'] ) ? as_clean_value( $_POST['full'] ) : null;
 $age		 = isset( $_POST['age'] ) ? as_clean_value( $_POST['age'] ) : null;
 $cash		 = isset( $_POST['cash'] ) ? as_clean_value( $_POST['cash'] ) : null;
@@ -115,8 +91,8 @@ $message = "Здравствуйте!\\о\n" .
 	"Когда готовы приступить к работе - $when\n\n\n" .
 
 // Mail headers.
-$headers = "Откуда: Анкета Москва @" . $_SERVER['HTTP_HOST'] . "\r\n" .
-	"Reply-To: Анкета Москва@" . $_SERVER['HTTP_HOST'] . "\r\n" .
+$headers = "From: no-reply@" . $_SERVER['HTTP_HOST'] . "\r\n" .
+	"Reply-To: no-reply@" . $_SERVER['HTTP_HOST'] . "\r\n" .
 	"X-Mailer: PHP/" . phpversion();
 
 // Sending mail.

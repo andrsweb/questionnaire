@@ -21,7 +21,6 @@ const submitForm = () => {
         formResponse.classList.remove( [ 'success', 'error' ] )
         formResponse.textContent = 'Обработка...'
         request.addEventListener( 'load', () => {
-            console.log( request.status )
             if  ( request.status === 200 ) {
                 formResponse.classList.add( 'success' )
             } else {
