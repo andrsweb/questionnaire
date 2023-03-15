@@ -29,7 +29,9 @@ $vk		     = isset( $_POST['vk'] ) ? as_clean_value( $_POST['vk'] ) : null;
 $ok		     = isset( $_POST['ok'] ) ? as_clean_value( $_POST['ok'] ) : null;
 $inst		 = isset( $_POST['inst'] ) ? as_clean_value( $_POST['inst'] ) : null;
 $from		 = isset( $_POST['from'] ) ? as_clean_value( $_POST['from'] ) : null;
-$fact		 = isset( $_POST['from'] ) ? as_clean_value( $_POST['fact'] ) : null;
+$fact1		 = isset( $_POST['fact1'] ) ? as_clean_value( $_POST['fact1'] ) : null;
+$fact2		 = isset( $_POST['fact2'] ) ? as_clean_value( $_POST['fact2'] ) : null;
+$fact3		 = isset( $_POST['fact3'] ) ? as_clean_value( $_POST['fact3'] ) : null;
 // Checkboxes
 $computercheck	 = isset( $_POST['computer-check'] ) ? as_clean_value( $_POST['computer-check'] ) : 'Нет';
 $notecheck		 = isset( $_POST['note-check'] ) ? as_clean_value( $_POST['note-check'] ) : 'Нет';
@@ -54,7 +56,7 @@ $when	     = isset( $_POST['when-date'] ) ? as_clean_value( $_POST['when-date'] 
 
 
 // Prepare message for mail.
-$message = "Здравствуйте!\\о\n" .
+$message = "Здравствуйте!\\n" .
 	"Вы получили письмо:\n\n" .
 	"ФИО - $full\n" .
 	"Возраст - $age\n" .
@@ -70,7 +72,9 @@ $message = "Здравствуйте!\\о\n" .
 	"Одноклассники - $ok\n" .
 	"Инстаграм - $inst\n" .
 	"Откуда узнали о вакансии: - $from\n" .
-	"Фактический опыт работы: - $fact\n\n" .
+	"Фактический опыт работы: - $fact1\n" .
+	"$fact2\n" .
+	"$fact3\n\n" .
 	"Компьютер: - $computercheck\n" .
 	"Ноутбук: - $notecheck\n" .
 	"MacBook: - $maccheck\n\n" .
@@ -88,15 +92,15 @@ $message = "Здравствуйте!\\о\n" .
 	"BGA пайка - $bgacheck\n" .
 	"Модульный ремонт смартфонов - $modulecheck\n" .
 	"Что еще умеете делать - $what\n" .
-	"Когда готовы приступить к работе - $when\n\n\n" .
+	"Когда готовы приступить к работе - $when\n\n\n";
 
 // Mail headers.
-$headers = "From: no-reply@" . $_SERVER['HTTP_HOST'] . "\r\n" .
-	"Reply-To: no-reply@" . $_SERVER['HTTP_HOST'] . "\r\n" .
-	"X-Mailer: PHP/" . phpversion();
+// $headers = "From: no-reply@" . $_SERVER['HTTP_HOST'] . "\r\n" .
+// 	"Reply-To: no-reply@" . $_SERVER['HTTP_HOST'] . "\r\n" .
+// 	"X-Mailer: PHP/" . phpversion();
 
 // Sending mail.
-if( mail('andrsweb@mail.ru', 'Message', $message, $headers ) )
+if( mail('andrsweb@mail.ru', 'Message', $message ) )
 	echo 'Спасибо за Ваше сообщение! Ваша заявка будет рассмотрена в ближайшее время';	// Success.
 else
 	echo 'Ошибка отправки! Попробуйте позже!';	// Failed.

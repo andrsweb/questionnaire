@@ -14,6 +14,10 @@ h6, .h6 {
 h1, .h1 {
 	font-size: 25px;
 
+	span {
+		font-weight: $fw-regular;
+	}
+
 	@media all and (min-width: $lg) {
 		font-size: 40px;
 		margin-bottom: 30px;
