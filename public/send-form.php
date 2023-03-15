@@ -60,7 +60,7 @@ $message = '
 	<html>
 		<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-			<title>Тема страницы</title>
+		<title>Анкета</title>
 		</head>
 		<body>
 			<p>
@@ -69,282 +69,282 @@ $message = '
 			<p>
 				Вы получили письмо:
 			</p>
-			<table>
+			<table border="2px">
 			<tbody>
 				<tr>
 					<td>
 						ФИО 
 					</td>
-					<td>
-						'. $full .'
+					<td align="center">
+						<b>'. $full .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Возраст
 					</td>
-					<td>
-						'. $age .'
+					<td align="center">
+						<b>'. $age .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Желаемая ЗП
 					</td>
-					<td>
-						'. $cash .'
+					<td align="center">
+						<b>'. $cash .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Тел (моб)
 					</td>
-					<td>
-						'. $mob .'
+					<td align="center">
+						<b>'. $mob .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Тел (дом)
 					</td>
-					<td>
-						'. $house .'
+					<td align="center">
+						<b>'. $house .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Город проживания .
 					</td>
-					<td>
-						'. $town .'
+					<td align="center">
+						<b>'. $town .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Ближайшее метро
 					</td>
-					<td>
-						'. $metro .'
+					<td align="center">
+						<b>'. $metro .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Адресс проживания (фактический)
 					</td>
-					<td>
-						'. $address .'
+					<td align="center">
+						<b>'. $address .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Место учебы (для студентов)
 					</td>
-					<td>
-						'. $stud .'
+					<td align="center">
+						<b>'. $stud .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Гражданство
 					</td>
-					<td>
-						'. $сitizenship .'
+					<td align="center">
+						<b>'. $сitizenship .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Вконтакте
 					</td>
-					<td>
-						'. $vk .'
+					<td align="center">
+						<b>'. $vk .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Одноклассники
 					</td>
-					<td>
-						'. $ok .'
+					<td align="center">
+						<b>'. $ok .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Инстаграм 
 					</td>
-					<td>
-						'. $inst .'
+					<td align="center">
+						<b>'. $inst .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Откуда узнали о вакансии 
 					</td>
-					<td>
-						'. $from .'
+					<td align="center">
+						<b>'. $from .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Фактический опыт работы:
 					</td>
-					<td>
-						'. $fact1 .'
+					<td align="center">
+						<b>'. $fact1 .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td></td>
-					<td>
-						'. $fact2 .'
+					<td align="center">
+						<b>'. $fact2 .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td></td>
-					<td>
-						'. $fact3 .'
+					<td align="center">
+						<b>'. $fact3 .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Компьютер
 					</td>
-					<td>
-						'. $computercheck .'
+					<td align="center">
+						<b>'. $computercheck .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Ноутбук:
 					</td>
-					<td>
-						'. $notecheck .'
+					<td align="center">
+						<b>'. $notecheck .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						MacBook
 					</td>
-					<td>
-						'. $maccheck .'
+					<td align="center">
+						<b>'. $maccheck .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Операционные системы 
 					</td>
-					<td>
-						'. $oscheck .'
+					<td align="center">
+						<b>'. $oscheck .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Установка Win на MacBook
 					</td>
-					<td>
-						'. $instalcheck .'
+					<td align="center">
+						<b>'. $instalcheck .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Восстановление данных
 					</td>
-					<td>
-						'. $restcheck .'
+					<td align="center">
+						<b>'. $restcheck .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Настройка роутеров Wi-Fi
 					</td>
-					<td>
-						'. $wificheck .' 
+					<td align="center">
+						<b>'. $wificheck .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Чистка и настройка реестра
 					</td>
-					<td>
-						'. $regcheck .'
+					<td align="center">
+						<b>'. $regcheck .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Замена жесткого диска ноутбука
 					</td>
-					<td>
-						'. $hardcheck .'
+					<td align="center">
+						<b>'. $hardcheck .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Замена матрицы ноутбука
 					</td>
-					<td>
-						'. $matrixcheck .'
+					<td align="center">
+						<b>'. $matrixcheck .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Ремонт материнской платы
 					</td>
-					<td>
-						'. $mothercheck .'
+					<td align="center">
+						<b>'. $mothercheck .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Замена термопасты ноутбука
 					</td>
-					<td>
-						'. $thermocheck .'
+					<td align="center">
+						<b>'. $thermocheck .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Обжимка витой пары
 					</td>
-					<td>
-						'. $vitcheck .'
+					<td align="center">
+						<b>'. $vitcheck .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Ремонт и настройка принтера
 					</td>
-					<td>
-						'. $printcheck .'
+					<td align="center">
+						<b>'. $printcheck .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						BGA пайка
 					</td>
-					<td>
-						'. $bgacheck .'
+					<td align="center">
+						<b>'. $bgacheck .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Модульный ремонт смартфонов
 					</td>
-					<td>
-						'. $modulecheck .'
+					<td align="center">
+						<b>'. $modulecheck .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Что еще умеете делать
 					</td>
-					<td>
-						'. $what .'
+					<td align="center">
+						<b>'. $what .'</b>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						Когда готовы приступить к работе
 					</td>
-					<td>
-						'. $when .'
+					<td align="center">
+						<b>'. $when .'</b>
 					</td>
 				</tr>
 			</tbody>
@@ -357,7 +357,7 @@ $message = '
 $headers = "Content-type: text/html; charset=utf-8\r\n";
 
 // Sending mail.
-if( mail('andrsweb@mail.ru', 'Message', $message ) )
+if( mail('andrsweb@mail.ru', 'Message', $message, $headers ) )
 	echo 'Спасибо за Ваше сообщение! Ваша заявка будет рассмотрена в ближайшее время';	// Success.
 else
 	echo 'Ошибка отправки! Попробуйте позже!';	// Failed.
