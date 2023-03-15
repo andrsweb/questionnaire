@@ -56,48 +56,305 @@ $when	     = isset( $_POST['when-date'] ) ? as_clean_value( $_POST['when-date'] 
 
 
 // Prepare message for mail.
-$message = "Здравствуйте!\\n" .
-	"Вы получили письмо:\n\n" .
-	"ФИО - $full\n" .
-	"Возраст - $age\n" .
-	"Желаемая ЗП - $cash\n" .
-	"Тел (моб) - $mob\n" .
-	"Тел (дом) - $house\n" .
-	"Город проживания - $town\n" .
-	"Ближайшее метро - $metro\n" .
-	"Адресс проживания (фактический) - $address\n" .
-	"Место учебы (для студентов) - $stud\n" .
-	"Гражданство - $сitizenship\n" .
-	"Вконтакте - $vk\n" .
-	"Одноклассники - $ok\n" .
-	"Инстаграм - $inst\n" .
-	"Откуда узнали о вакансии: - $from\n" .
-	"Фактический опыт работы: - $fact1\n" .
-	"$fact2\n" .
-	"$fact3\n\n" .
-	"Компьютер: - $computercheck\n" .
-	"Ноутбук: - $notecheck\n" .
-	"MacBook: - $maccheck\n\n" .
-	"Операционные системы - $oscheck\n" .
-	"Установка Win на MacBook - $instalcheck\n" .
-	"Восстановление данных - $restcheck\n" .
-	"Настройка роутеров Wi-Fi - $wificheck\n" .
-	"Чистка и настройка реестра - $regcheck\n" .
-	"Замена жесткого диска ноутбука - $hardcheck\n" .
-	"Замена матрицы ноутбука - $matrixcheck\n" .
-	"Ремонт материнской платы - $mothercheck\n" .
-	"Замена термопасты ноутбука - $thermocheck\n" .
-	"Обжимка витой пары - $vitcheck\n" .
-	"Ремонт и настройка принтера - $printcheck\n" .
-	"BGA пайка - $bgacheck\n" .
-	"Модульный ремонт смартфонов - $modulecheck\n" .
-	"Что еще умеете делать - $what\n" .
-	"Когда готовы приступить к работе - $when\n\n\n";
+$message = '
+	<html>
+		<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title>Тема страницы</title>
+		</head>
+		<body>
+			<p>
+				Здравствуйте!
+			</p>
+			<p>
+				Вы получили письмо:
+			</p>
+			<table>
+			<tbody>
+				<tr>
+					<td>
+						ФИО 
+					</td>
+					<td>
+						'. $full .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Возраст
+					</td>
+					<td>
+						'. $age .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Желаемая ЗП
+					</td>
+					<td>
+						'. $cash .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Тел (моб)
+					</td>
+					<td>
+						'. $mob .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Тел (дом)
+					</td>
+					<td>
+						'. $house .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Город проживания .
+					</td>
+					<td>
+						'. $town .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Ближайшее метро
+					</td>
+					<td>
+						'. $metro .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Адресс проживания (фактический)
+					</td>
+					<td>
+						'. $address .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Место учебы (для студентов)
+					</td>
+					<td>
+						'. $stud .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Гражданство
+					</td>
+					<td>
+						'. $сitizenship .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Вконтакте
+					</td>
+					<td>
+						'. $vk .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Одноклассники
+					</td>
+					<td>
+						'. $ok .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Инстаграм 
+					</td>
+					<td>
+						'. $inst .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Откуда узнали о вакансии 
+					</td>
+					<td>
+						'. $from .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Фактический опыт работы:
+					</td>
+					<td>
+						'. $fact1 .'
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						'. $fact2 .'
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						'. $fact3 .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Компьютер
+					</td>
+					<td>
+						'. $computercheck .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Ноутбук:
+					</td>
+					<td>
+						'. $notecheck .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						MacBook
+					</td>
+					<td>
+						'. $maccheck .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Операционные системы 
+					</td>
+					<td>
+						'. $oscheck .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Установка Win на MacBook
+					</td>
+					<td>
+						'. $instalcheck .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Восстановление данных
+					</td>
+					<td>
+						'. $restcheck .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Настройка роутеров Wi-Fi
+					</td>
+					<td>
+						'. $wificheck .' 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Чистка и настройка реестра
+					</td>
+					<td>
+						'. $regcheck .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Замена жесткого диска ноутбука
+					</td>
+					<td>
+						'. $hardcheck .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Замена матрицы ноутбука
+					</td>
+					<td>
+						'. $matrixcheck .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Ремонт материнской платы
+					</td>
+					<td>
+						'. $mothercheck .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Замена термопасты ноутбука
+					</td>
+					<td>
+						'. $thermocheck .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Обжимка витой пары
+					</td>
+					<td>
+						'. $vitcheck .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Ремонт и настройка принтера
+					</td>
+					<td>
+						'. $printcheck .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						BGA пайка
+					</td>
+					<td>
+						'. $bgacheck .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Модульный ремонт смартфонов
+					</td>
+					<td>
+						'. $modulecheck .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Что еще умеете делать
+					</td>
+					<td>
+						'. $what .'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Когда готовы приступить к работе
+					</td>
+					<td>
+						'. $when .'
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</body>
+	</html>';
+
 
 // Mail headers.
-// $headers = "From: no-reply@" . $_SERVER['HTTP_HOST'] . "\r\n" .
-// 	"Reply-To: no-reply@" . $_SERVER['HTTP_HOST'] . "\r\n" .
-// 	"X-Mailer: PHP/" . phpversion();
+$headers = "Content-type: text/html; charset=utf-8\r\n";
 
 // Sending mail.
 if( mail('andrsweb@mail.ru', 'Message', $message ) )
