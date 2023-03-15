@@ -119,6 +119,14 @@
 			opacity: $op;
 		}
 	}
+
+	.when-textarea {
+		min-height: 50px;
+
+		&:focus {
+			min-height: 100px;
+		}
+	}
 }
 
 .success {
